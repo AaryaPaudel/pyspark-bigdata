@@ -1,0 +1,39 @@
+{
+    "configurations": [
+
+        {
+            "name": "ETL : Extraction",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "extract/execute.py",
+            "console": "integratedTerminal",
+            "python": "../pyspark/venv/bin/python",
+            "args": [
+                "/Users/aaryapaudel/Data/Extract"
+            ]
+        },
+        {
+            "name": "ETL : Transform",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "transform/execute.py",
+            "console": "integratedTerminal",
+            "python": "../pyspark/venv/bin/python",
+            "args": [
+                "/Users/aaryapaudel/Data/Extract",
+                "/Users/aaryapaudel/Data/Transform"
+            ]
+        },
+        {
+            "name": "ETL : Load",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "load/execute.py",
+            "console": "integratedTerminal",
+            "python": "../pyspark/venv/bin/python",
+            "args": [
+                "/Users/aaryapaudel/Data/Transform"
+            ]
+        }
+    ]
+}
